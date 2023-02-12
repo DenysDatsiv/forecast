@@ -7,15 +7,18 @@
                     *ngIf="searchCityForm.get('city').touched && searchCityForm.get('city').invalid">
                     <p *ngIf="searchCityForm.get('city').errors?.['required'] && searchCityForm.get('city').touched">
                         <span class="error-span">*</span>Field can`t be
-                        empty</p>
+                        empty
+                    </p>
                     <p
                         *ngIf="searchCityForm.get('city').errors?.['firstLetterCapital'] && searchCityForm.get('city').touched">
                         <span class="error-span">*</span>First
-                        letter should be uppercase!</p>
+                        letter should be uppercase!
+                    </p>
                     <p
                         *ngIf="searchCityForm.get('city').errors?.['noSpaceAllowed'] && searchCityForm.get('city').touched">
                         <span class="error-span">*</span>No free
-                        space allowed!</p>
+                        space allowed!
+                    </p>
                 </div>
             </div>
             <button type="submit" class="btn btn-primary">Search City</button>

@@ -9,8 +9,7 @@ import { WeatherService } from '../services/weather.service';
   styleUrls: ['./main-page.component.css']
 })
 export class MainPageComponent implements OnInit {
-  weatherData: any = JSON.parse(localStorage.getItem("forecast"))|| [];
-  a:any ;
+  weatherData: any = JSON.parse(localStorage.getItem("forecast")) || [];
   currentTime: any = new Date();
   searchCityForm: FormGroup;
   constructor(private weatherService: WeatherService, private validationService: ValidationService) { }
@@ -18,7 +17,7 @@ export class MainPageComponent implements OnInit {
   ngOnInit(): void {
     this.searchCityForm = new FormGroup(
       {
-        'city': new FormControl("",[Validators.required, this.validationService.noSpaceAllowed, this.validationService.firstLetterCapital])
+        'city': new FormControl("", [Validators.required, this.validationService.noSpaceAllowed, this.validationService.firstLetterCapital])
       }
     );
   }
