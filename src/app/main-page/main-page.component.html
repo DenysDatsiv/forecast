@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="col-xs-12">
+        <form [formGroup]="searchCityForm" (ngSubmit)="onSubmit()" class="main-container">
+            <div class="input-block">
+                <input class="form-control" type="text" formControlName="city">
+                <div class="errors-block"
+                    *ngIf="searchCityForm.get('city').touched && searchCityForm.get('city').invalid">
+                    <p *ngIf="searchCityForm.get('city').errors?.['required'] && searchCityForm.get('city').touched">
+                        <span class="error-span">*</span>Field can`t be
+                        empty</p>
+                    <p
+                        *ngIf="searchCityForm.get('city').errors?.['firstLetterCapital'] && searchCityForm.get('city').touched">
+                        <span class="error-span">*</span>First
+                        letter should be uppercase!</p>
+                    <p
+                        *ngIf="searchCityForm.get('city').errors?.['noSpaceAllowed'] && searchCityForm.get('city').touched">
+                        <span class="error-span">*</span>No free
+                        space allowed!</p>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Search City</button>
+        </form>
+        <div *ngFor="let infoForecast of weatherData" class="list-group">
+            <div class="list-group-item">
+                <p>Location: {{infoForecast.name}} </p>
+                <p>Temperature: {{infoForecast.main.temp | roundPipe}}</p>
+            </div>
+        </div>
+    </div>
+</div>

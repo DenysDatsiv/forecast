@@ -1,0 +1,44 @@
+.form-control {
+  max-width: 80%;
+  margin: 10px auto;
+  height: 40px;
+}
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: start;
+}
+.error-message {
+  color: red;
+}
+.btn-primary {
+  margin: 10px auto;
+  height: 40px;
+}
+input.ng-invalid {
+  border: 1px solid red;
+}
+.errors-block {
+  display: flex;
+  flex-direction: column;
+  color: red;
+}
+.error-span {
+  color: black;
+  font-size: 18px;
+}
+.errors-block {
+  margin-left: 12em;
+}
+.result_of_searching {
+  display: flex;
+}
+/*  */
+.current_serching_forecast_section
+{
+  display: flex;
+  margin:0 auto;
+  border: 1px solid black;
+  max-width: 60%;
+}
