@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class RoundPipePipe implements PipeTransform {
 
-  transform(value: any): any {
+  transform(value: number): string {
     return Math.round(value) + '°C';
   }
 
