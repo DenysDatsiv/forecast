@@ -16,7 +16,6 @@ export class MainPageComponent implements OnInit, AfterViewInit {
   currentTime: any = new Date();
   five_sec_timer: number = 5000;
   searchCityForm: FormGroup;
-  data: string = null;
   error: string = null;
   constructor(private weatherService: WeatherService,
     private validationService: ValidationService,
