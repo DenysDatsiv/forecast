@@ -57,7 +57,6 @@ export class MainPageComponent implements OnInit, AfterViewInit {
         this.firstFiveElementSlicer()
       },
       (errorMessage) => {
-        console.log()
         this.error = errorMessage
       }
     )
