@@ -57,17 +57,17 @@ export class MainPageComponent implements OnInit, AfterViewInit {
         this.firstFiveElementSlicer()
       },
       (errorMessage) => {
-        this.error = errorMessage
+        return this.error = errorMessage
       }
     )
   }
   firstFiveElementSlicer() {
-    this.searchedFirstFiveElements = this.weatherData.slice(0, 5);
+    return this.searchedFirstFiveElements = this.weatherData.slice(0, 5);
   }
 
   onSubmit() {
     const value = this.searchCityForm.value.city;
-    this.getWeatherData(value);
     this.error = null;
+    return this.getWeatherData(value);
   }
 }

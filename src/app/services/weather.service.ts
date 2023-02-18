@@ -28,7 +28,7 @@ export class WeatherService {
       switchMap((values) => {
         return this.http.get('https://api.openweathermap.org/data/2.5/weather', { params: values })
       }), catchError((error) => {
-        let errorMessage = "Check vilidity";
+        let errorMessage = "Unknown Error";
         if (error instanceof HttpErrorResponse) {
           if (error.error instanceof ErrorEvent) {
             console.log("error Event")
@@ -43,7 +43,7 @@ export class WeatherService {
           }
         }
         else {
-          console.log("An error occured")
+          console.log("An error occurred")
         }
         return throwError(errorMessage)
       })
