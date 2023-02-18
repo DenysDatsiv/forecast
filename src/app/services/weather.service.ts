@@ -35,7 +35,8 @@ export class WeatherService {
           } else {
             switch (error.status) {
               case 400:
-                errorMessage = "400 Bad Request"
+                errorMessage = "Field can`t be empty"
+                break
               case 404:
                 errorMessage = "City name is Incorrect"
                 break
