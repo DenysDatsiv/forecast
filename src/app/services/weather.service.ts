@@ -9,7 +9,6 @@ import { catchError, map, switchMap } from 'rxjs/operators';
 })
 export class WeatherService {
   constructor(private http: HttpClient) { }
-  private responseStatus: string = '';
   getWeatherInfo(cityName: string) {
     return new Observable((observer) => {
       navigator.geolocation.getCurrentPosition(
@@ -49,6 +48,5 @@ export class WeatherService {
         return throwError(errorMessage)
       })
     )
-
   }
 }

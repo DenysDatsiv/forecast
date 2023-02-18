@@ -38,6 +38,7 @@ export class MainPageComponent implements OnInit, AfterViewInit {
   }
 
   private getWeatherData(SearchedCity: string) {
+
     const exists = this.weatherData.findIndex(
       (infoAbout) => infoAbout.name === SearchedCity &&
         (infoAbout.timeOfSubmit - this.currentTime) > this.five_sec_timer);
@@ -69,5 +70,4 @@ export class MainPageComponent implements OnInit, AfterViewInit {
     this.getWeatherData(value);
     this.error = null;
   }
-
 }
